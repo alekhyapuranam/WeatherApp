@@ -1,0 +1,86 @@
+body {
+   background-image: url(/mesmerizing-view-fresh-green-fields-cloudy-sky.jpg); 
+  background-position: 10%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   display: flex;
+   align-items: center;/*aligns items in flebox vertically*/
+   justify-content: center;/*aligns items in flebox horizontally*/
+   height: 100vh;
+   margin: 0;
+}
+#weather-container{
+    background: rgba(255, 255, 255,0.3);
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255,0.1);
+    text-align: center;
+}
+h2, label, p{
+    color: #fff;
+    margin: 8px 0;
+}
+input{
+    width: calc(100%-16px); /* dynamically creates space in the container. subtracts 16px from whole space to add paddings and width etc.*/
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;/*rounded corners*/
+    border: 1px solid white;
+    margin-top: 20px;/* creates space between this specific element and whatever there on top of it.*/
+
+}
+button{
+    background: #5a0596;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+}
+button:hover{
+    background: #0f011f;
+}
+#temp-div p{
+    font-size: 60px;
+    margin-top: -30px;
+}
+#weather-info{
+    font-size: 20px;
+}
+#weather-icon{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;/* 0 means no space on top, auto means centers the element, 10px is space at bottom outside of the element.*/
+    margin-bottom: 0;
+    display: none;
+}
+#hourly-forecast{
+    margin-top: 50px;
+    overflow-x: auto;/* provides scrolling  horizontally if required*/
+    white-space: nowrap;/* doesnot wrap the content to next line if content overflows*/
+    display: flex;
+    justify-content: space-between;
+}
+.hourly-item{
+    flex: 0 0 auto;/* 1st element is flex grow, 2nd is flex shrink, 3rd is flex basis. It means no grow or shrink, just use default content width or specified width*/
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+.hourly-item img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+#hourly-heading{
+    color: #fff;
+    margin-top: 10px;
+}
